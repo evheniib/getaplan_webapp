@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-8">
+    <h1>Start page</h1>
+
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ render_field(form.select) }}
+        <p>
+            {{ render_field(form.submit) }}
+        </p>
+    </form>
+</div>    
+{% endblock %}
